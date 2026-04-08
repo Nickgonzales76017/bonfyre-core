@@ -26,6 +26,11 @@ Why first:
 - clearly a shared library
 - low ambiguity about ownership
 
+Status:
+
+- imported into `bonfyre-core/lib/liblambda-tensors/`
+- build artifacts removed from the extracted copy so the new repo stays source-first
+
 ### 2. `ArtifactManifest`
 
 Current source:
@@ -40,6 +45,10 @@ Why first:
 
 - shared contract across Bonfyre binaries and Pages apps
 - useful before any later repo split
+
+Status:
+
+- imported into `bonfyre-core/schemas/artifact-manifest/`
 
 ### 3. `TreeSitterCanon`
 
@@ -102,3 +111,14 @@ Batch 1 is complete when:
 2. a repo-local build/test path exists for each imported tool/library
 3. `SOURCE_OF_TRUTH_MAP.md` rows for these modules are marked migrated
 4. `bonfyre-oss` and the vault stop being treated as canonical for these items
+
+## Progress
+
+- imported:
+  - `liblambda-tensors`
+  - `ArtifactManifest`
+- pending:
+  - `TreeSitterCanon`
+  - `JqCanon`
+  - `ZstdFamilyCompressor`
+  - `_shared/bonfyre_toolkit.py`
