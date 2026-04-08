@@ -1,0 +1,14 @@
+# Build outputs
+*.o
+*.a
+*.so
+*.dylib
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Temp/output
+tmp/
+dist/
+build/
