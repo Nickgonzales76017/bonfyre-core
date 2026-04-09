@@ -11,6 +11,15 @@ Planned imports for the first `bonfyre-core` extraction batch.
 | `/Users/nickgonzales/Documents/Bonfyre/10-Code/ZstdFamilyCompressor` | `tools/zstd-family-compressor/` | Compression substrate helper. |
 | `/Users/nickgonzales/Documents/Bonfyre/10-Code/_shared/bonfyre_toolkit.py` | `scripts/bonfyre_toolkit.py` | Shared utility script. |
 
+## Batch 2 Imports
+
+| Current Source | Target Path In `bonfyre-core` | Notes |
+|---|---|---|
+| `/Users/nickgonzales/Projects/bonfyre-oss/lib/libbonfyre` | `lib/libbonfyre/` | Canonical shared C runtime library for core binaries. |
+| `/Users/nickgonzales/Projects/bonfyre-oss/cmd/BonfyreCanon` | `cmd/bonfyre-canon/` | Structure-aware canonicalization binary. |
+| `/Users/nickgonzales/Projects/bonfyre-oss/cmd/BonfyreCompress` | `cmd/bonfyre-compress/` | Family-aware compression binary. |
+| `/Users/nickgonzales/Projects/bonfyre-oss/cmd/BonfyreHash` | `cmd/bonfyre-hash/` | Hashing and Merkle DAG binary. |
+
 ## Import Strategy
 
 Recommended order:
@@ -31,3 +40,7 @@ This order gives the repo a library-first shape instead of starting with wrapper
 - `tools/jq-canon/`
 - `tools/zstd-family-compressor/`
 - `scripts/bonfyre_toolkit.py`
+- `lib/libbonfyre/`
+- `cmd/bonfyre-canon/`
+- `cmd/bonfyre-compress/`
+- `cmd/bonfyre-hash/`

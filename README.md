@@ -30,9 +30,19 @@ Initial migration batch:
 - `ZstdFamilyCompressor`
 - `_shared/bonfyre_toolkit.py`
 
+## Phase 2 Scope
+
+Second migration batch:
+
+- `libbonfyre`
+- `BonfyreCanon`
+- `BonfyreCompress`
+- `BonfyreHash`
+
 Source inventory and rationale live in:
 
 - [docs/migration-batch-1.md](/Users/nickgonzales/Projects/bonfyre-core/docs/migration-batch-1.md)
+- [docs/migration-batch-2.md](/Users/nickgonzales/Projects/bonfyre-core/docs/migration-batch-2.md)
 - [docs/source-imports.md](/Users/nickgonzales/Projects/bonfyre-core/docs/source-imports.md)
 
 ## Intended Layout
@@ -43,6 +53,8 @@ Source inventory and rationale live in:
   - artifact schema and validation contract
 - `tools/`
   - canonicalization and compression helpers
+- `cmd/`
+  - core Bonfyre binaries backed by shared substrate
 - `scripts/`
   - migration and packaging helpers
 - `docs/`

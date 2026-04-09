@@ -3,6 +3,11 @@
 *.a
 *.so
 *.dylib
+/lib/libbonfyre/obj/
+/lib/libbonfyre/test_bonfyre
+/cmd/bonfyre-canon/bonfyre-canon
+/cmd/bonfyre-compress/bonfyre-compress
+/cmd/bonfyre-hash/bonfyre-hash
 
 # Python cache
 __pycache__/
