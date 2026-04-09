@@ -60,6 +60,15 @@ Target:
 
 - `tools/tree-sitter-canon/`
 
+Why first:
+
+- small standalone canon helper
+- easy to verify with its existing smoke test
+
+Status:
+
+- imported into `bonfyre-core/tools/tree-sitter-canon/`
+
 ### 4. `JqCanon`
 
 Current source:
@@ -69,6 +78,15 @@ Current source:
 Target:
 
 - `tools/jq-canon/`
+
+Why first:
+
+- shared JSON canonicalization helper
+- already packaged as a tiny standalone tool
+
+Status:
+
+- imported into `bonfyre-core/tools/jq-canon/`
 
 ### 5. `ZstdFamilyCompressor`
 
@@ -80,6 +98,15 @@ Target:
 
 - `tools/zstd-family-compressor/`
 
+Why first:
+
+- shared compression helper that other layers can build on
+- low ambiguity about ownership
+
+Status:
+
+- imported into `bonfyre-core/tools/zstd-family-compressor/`
+
 ### 6. `_shared/bonfyre_toolkit.py`
 
 Current source:
@@ -89,6 +116,15 @@ Current source:
 Target:
 
 - `scripts/bonfyre_toolkit.py`
+
+Why first:
+
+- shared utility module used by lightweight scripts
+- simple to validate with Python compilation
+
+Status:
+
+- imported into `bonfyre-core/scripts/bonfyre_toolkit.py`
 
 ## Not In Batch 1
 
@@ -117,8 +153,13 @@ Batch 1 is complete when:
 - imported:
   - `liblambda-tensors`
   - `ArtifactManifest`
-- pending:
   - `TreeSitterCanon`
   - `JqCanon`
   - `ZstdFamilyCompressor`
   - `_shared/bonfyre_toolkit.py`
+- verification:
+  - `schemas/artifact-manifest/tests/smoke.sh`
+  - `tools/tree-sitter-canon/tests/smoke.sh`
+  - `tools/jq-canon/tests/smoke.sh`
+  - `tools/zstd-family-compressor/tests/smoke.sh`
+  - `python3 -m py_compile scripts/bonfyre_toolkit.py`

@@ -27,3 +27,7 @@ This order gives the repo a library-first shape instead of starting with wrapper
 
 - `lib/liblambda-tensors/`
 - `schemas/artifact-manifest/`
+- `tools/tree-sitter-canon/`
+- `tools/jq-canon/`
+- `tools/zstd-family-compressor/`
+- `scripts/bonfyre_toolkit.py`
