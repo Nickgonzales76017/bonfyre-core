@@ -1,78 +1,25 @@
-# bonfyre-core
+<p align="center"><img src="https://github.com/user-attachments/assets/7785a8d6-6e28-4892-8958-3daf85414f05" width="80" alt="Bonfÿre knight" /></p>
 
-Shared substrate for the Bonfyre runtime.
+# Bonfÿre Core
 
-This repo is the first extraction from the current mixed Bonfyre source surface. It is intended to become the canonical home for:
+**Shared native libraries and artifact contracts.**
 
-- shared libraries
-- artifact contracts and schemas
-- canonicalization helpers
-- compression substrate
-- cross-binary build utilities
+C11 library authors, local-data developers, and integrations that require the smallest reusable substrate.
 
-## Why This Exists
+## Source and scope
 
-Bonfyre currently has two overlapping source forests:
+This repository preserves an **April 2026 source extraction**. It contains `lib/`, `cmd/`, `schemas/`, `tools/` and migration notes. That material remains useful for inspection and for understanding a component boundary, but it is not the latest canonical source or an independently supported package release.
 
-- `/Users/nickgonzales/Documents/Bonfyre/10-Code/*`
-- `/Users/nickgonzales/Projects/bonfyre-oss/cmd/*`
+The [current Bonfÿre development lineage](https://github.com/Nickgonzales76017/bonfyre) owns the integrated version: [`lib/`](https://github.com/Nickgonzales76017/bonfyre/tree/main/lib/). Later source changes are reviewed and published separately from private runtime state.
 
-`bonfyre-core` is the first cleanup step. Its job is to hold the reusable substrate that multiple runtime layers depend on, so later extractions can target a stable foundation instead of copying shared code across repos.
+The older extraction kept temporary vendored dependencies and original migration notes. They are not an additional source of truth; check the [current repository](https://github.com/Nickgonzales76017/bonfyre) for the version, license, operating contract and tests relevant to your use.
 
-## Phase 1 Scope
+## See the work in context
 
-Initial migration batch:
+- [Aurekai work samples](https://aurekai-work-samples.pages.dev/) — customer-facing tools and handoffs
+- [Bonfÿre developer and product guides](https://docs.aurekai.work/) — integrated operations and technical contexts
+- [Client integration examples](https://github.com/Nickgonzales76017/bonfyre/blob/main/docs/client-operations-portfolio.md) — real kinds of receiving-system work
 
-- `liblambda-tensors`
-- `ArtifactManifest`
-- `TreeSitterCanon`
-- `JqCanon`
-- `ZstdFamilyCompressor`
-- `_shared/bonfyre_toolkit.py`
+For an **independently scoped native-C example** with its own build and verification fixtures, see [Bonfÿre Statement Import](https://github.com/Nickgonzales76017/bonfyre-statement-import).
 
-## Phase 2 Scope
-
-Second migration batch:
-
-- `libbonfyre`
-- `BonfyreCanon`
-- `BonfyreCompress`
-- `BonfyreHash`
-
-Source inventory and rationale live in:
-
-- [docs/migration-batch-1.md](/Users/nickgonzales/Projects/bonfyre-core/docs/migration-batch-1.md)
-- [docs/migration-batch-2.md](/Users/nickgonzales/Projects/bonfyre-core/docs/migration-batch-2.md)
-- [docs/source-imports.md](/Users/nickgonzales/Projects/bonfyre-core/docs/source-imports.md)
-
-## Intended Layout
-
-- `lib/`
-  - shared libraries
-- `schemas/`
-  - artifact schema and validation contract
-- `tools/`
-  - canonicalization and compression helpers
-- `cmd/`
-  - core Bonfyre binaries backed by shared substrate
-- `scripts/`
-  - migration and packaging helpers
-- `docs/`
-  - extraction docs and dependency maps
-
-## Relationship To Other Repos
-
-- `bonfyre-core`
-  - shared substrate and contracts
-- `bonfyre-intake`
-  - media/text intake stages
-- `bonfyre-intelligence`
-  - retrieval, indexing, brief, graph, proof layers
-- `bonfyre-publish`
-  - render, emit, narrate, pack, distribute
-- `bonfyre-control`
-  - orchestration, API, auth, runtime control plane
-- `bonfyre-oss`
-  - stage integration, workflows, examples, shared Pages runtime
-- `bonfyre`
-  - prod integration and promoted releases
+The license accompanying this extraction governs its own files; the canonical repo and independent components may have different terms.
