@@ -6,6 +6,19 @@
 
 C11 library authors, local-data developers, and integrations that require the smallest reusable substrate.
 
+## Aurekai / Bonfÿre: role and maturity
+
+**Why this exists:** AI can generate software faster than teams can coordinate it. [Aurekai](https://aurekai.work) invests engineering and reusable software into connected public and commercial experiences; [Bonfÿre](https://github.com/Nickgonzales76017/bonfyre) supplies the native capabilities, source context, authorized work and verification that make projects compound.
+
+| | This repository |
+|---|---|
+| **Business outcome** | Reusable low-level components instead of project-by-project libraries |
+| **Technical scope** | C11 core libraries and native artifact contracts |
+| **Maturity boundary** | April 2026 source extraction; compare against canonical lib/ before use |
+| **Verification** | Inspect the source, build instructions, fixtures and limitations below; this repository is not proof of a live Aurekai release. |
+
+[Business, project and technical model](https://github.com/Nickgonzales76017/bonfyre/blob/main/docs/aurekai-bonfyre-model.md) · [Current canonical implementation](https://github.com/Nickgonzales76017/bonfyre)
+
 ## Source and scope
 
 This repository preserves an **April 2026 source extraction**. It contains `lib/`, `cmd/`, `schemas/`, `tools/` and migration notes. That material remains useful for inspection and for understanding a component boundary, but it is not the latest canonical source or an independently supported package release.
